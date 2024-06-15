@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Requerimiento 2</title>
+    <link rel="stylesheet" href="./asset/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./asset/img/ico_apple.png"
+    />
+  </head>
+  <body>
+    <div class="contenedor">
+      <div class="header">
+        <div class="logo">
+          <img src="./asset/img/logo_desafio_11.png" alt="Logo" />
+        </div>
+        <div class="menu">
+          <a href="index.html">Inicio</a>
+          <a href="requerimiento_1.html">Requerimiento 1</a>
+          <a href="requerimiento_2.html">Requerimiento 2</a>
+          <a href="requerimiento_3.html">Requerimiento 3</a>
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="menu-hidden" id="hiddenMenu">
+        <a href="index.html">Inicio</a>
+        <a href="requerimiento_1.html">Requerimiento 1</a>
+        <a href="requerimiento_2.html">Requerimiento 2</a>
+        <a href="requerimiento_3.html">Requerimiento 3</a>
+      </div>
+      <div class="ejercicios2">
+        <div class="tarjeta">
+          <img src="/asset/img/github.png" alt="GitHub" />
+          <input type="number" id="githubStickers" value="0" min="0" max="10" />
+        </div>
+        <div class="tarjeta">
+          <img src="./asset/img/slack.png" alt="Slack" />
+          <input type="number" id="slackStickers" value="0" min="0" max="10" />
+        </div>
+        <div class="tarjeta">
+          <img src="./asset/img/git.png" alt="Git" />
+          <input type="number" id="gitStickers" value="0" min="0" max="10" />
+        </div>
+      </div>
+      <button class="verifica" onclick="checkStickers()">Verificar</button>
+      <p id="message"></p>
+      <div class="footer">
+        <p>Pablo Subiabre 2024. Todos los derechos reservados</p>
+      </div>
+    </div>
+    <script src="./asset/js/script.js"></script>
+  </body>
+</html>

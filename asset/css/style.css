@@ -1,0 +1,273 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.contenedor {
+  display: flex;
+  background-color: #e4e4e4;
+  flex-direction: column;
+  max-width: 1366px;
+  width: 100%;
+  margin: 0 auto;
+  min-height: 100vh;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #000000;
+  height: 150px;
+  color: #fff;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+  color: #fff;
+  font-style: normal;
+  text-transform: uppercase;
+  padding-right: 50px;
+}
+
+.menu a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menu a:hover {
+  color: rgb(53, 158, 245);
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger-menu div {
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px;
+}
+
+.menu-hidden {
+  display: none;
+  flex-direction: column;
+  background-color: #000;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 200px;
+  padding-top: 150px; /* Para que el menú no esté detrás del header */
+  transition: left 0.3s;
+  z-index: 10;
+}
+
+.menu-hidden a {
+  color: #fff;
+  padding: 10px;
+  border-bottom: 1px solid #444;
+  text-decoration: none;
+}
+
+.menu-hidden.show {
+  display: flex;
+}
+
+.ejercicios {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.ejercicios1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  place-items: center;
+}
+.ejercicios2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  place-items: center;
+  margin-top: 20px;
+}
+
+img .imagen_click {
+  width: 200px;
+
+  margin: 0 auto;
+  padding: 10px;
+}
+.tarjeta {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.tarjeta p {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2vh;
+  color: #000;
+}
+
+.tarjeta a:hover {
+  color: #359ef5;
+}
+
+.tarjeta img {
+  max-width: 100%;
+  height: auto;
+}
+.logo img {
+  width: 100px;
+  height: 100px;
+  padding-left: 50px;
+}
+.verifica {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  background-color: #5cbadd;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transición suave */
+  font-family: "Oswald", sans-serif;
+  font-size: 1vw;
+  font-weight: 900;
+}
+
+.verifica:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.ingresa {
+  display: inline-block;
+  margin-top: 20px;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  padding-top: 1.5vh;
+  padding-bottom: 1.5vh;
+  background-color: #5cbadd;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Transición suave */
+  font-family: "Oswald", sans-serif;
+  font-size: 1vw;
+  font-weight: 900;
+}
+
+.ingresa:hover {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+#digit1,
+#digit2,
+#digit3 {
+  height: 4vh;
+}
+
+#message {
+  display: flex;
+  justify-content: center;
+  font-family: "Satisfy", cursive;
+  font-size: 2vw;
+  color: red;
+}
+
+#passwordMessage {
+  display: flex;
+  justify-content: center;
+  font-family: "Satisfy", cursive;
+  font-size: 2vw;
+  color: red;
+}
+
+@media (max-width: 996px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ejercicios {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .imagen_click {
+    width: 500px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .menu {
+    display: none;
+  }
+  .hamburger-menu {
+    display: flex;
+  }
+  .ejercicios {
+    grid-template-columns: 1fr;
+  }
+  .imagen_click {
+    width: 400px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    flex-direction: row;
+  }
+  .imagen_click {
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+}
+
+.bordered {
+  border: 2px solid red;
+}
+
+.footer {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Oswald", sans-serif;
+  background-color: #000000;
+  text-align: center;
+  color: #fff;
+}
